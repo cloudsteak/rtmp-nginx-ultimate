@@ -24,7 +24,7 @@ The main motivation was to do streaming to multiple platform at same time from [
 
 **GitHub repo**: <https://github.com/cloudsteak/rtmp-nginx-ultimate>
 
-**Docker Hub image**: <????>
+**Docker Hub image**: <https://github.com/cloudsteak/rtmp-nginx-ultimate>
 
 ## Details
 
