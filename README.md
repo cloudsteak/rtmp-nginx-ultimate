@@ -134,7 +134,7 @@ rtmp {
 
 
 # Hints for stream urls:
-* Azure Media Services: push rtmp://<event>.channel.media.azure.net:1935 app=live/<key>;
-* Restream: push rtmp://live.restream.io/live/<key>;
-* StreamServer: push rtmp://stream.djsipp.hu/LiveApp/<key>;
-* Facebook - DJ Sipp: push 'rtmp://127.0.0.1:19350/rtmp/<key1>?s_bl=1&s_ps=1&s_psm=1&s_sw=0&s_vt=api-s&a=<key2>';
+* Azure Media Services: push rtmp://_eventid_.channel.media.azure.net:1935 app=live/_key_;
+* Restream: push rtmp://live.restream.io/live/_key_;
+* StreamServer: push rtmp://stream.djsipp.hu/LiveApp/_key_;
+* Facebook - DJ Sipp: push 'rtmp://127.0.0.1:19350/rtmp/_key1_?s_bl=1&s_ps=1&s_psm=1&s_sw=0&s_vt=api-s&a=_key2_';
