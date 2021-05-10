@@ -28,6 +28,33 @@ The main motivation was to do streaming to multiple platform at same time from [
 
 ## Details
 
+### How to build the docker image
+
+1. Clone the code
+
+    ```
+        git clone https://github.com/cloudsteak/rtmp-nginx-ultimate.git
+    
+    ```
+
+2. Enter the cloned solution directory
+
+    ```
+        cd rtmp-nginx-ultimate
+    ```
+    
+3. Login to Docker Hub with your existing account
+
+    ```
+        docker login
+
+    ```
+
+4. Build image
+    ```
+        docker build -t cloudsteak/rtmp-nginx-ultimate .
+    ```
+
 ## How to use
 
 * For the simplest case, just run a container with this image:

@@ -1,0 +1,45 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: rtmp-nginx-ultimate
+spec:
+  replicas: 1
+  selector:
+   matchLabels:
+      app: rtmp-nginx-ultimate
+  template:
+    metadata:
+      labels:
+        app: rtmp-nginx-ultimate
+        name: rtmp-nginx-ultimate
+    spec:
+      nodeSelector:
+        "beta.kubernetes.io/os": linux
+      containers:
+      - name: rtmp-nginx-ultimate
+        image: "csacrprimary.azurecr.io/rtmp-nginx-ultimate:v1"
+        env:
+        - name: RESTREAM_KEY
+          value: "<key>"
+        - name: STREAMSERVER_KEY
+          value: "<key>"
+        ports:
+        - containerPort: 1935
+        resources:
+          requests:
+            cpu: "0.5"
+            memory: "500Mi"
+          limits:
+            cpu: "1"
+            memory: "3Gi"
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: rtmp-nginx-ultimate-fe
+spec:
+  type: LoadBalancer
+  ports:
+  - port: 1935
+  selector:
+    app: rtmp-nginx-ultimate
